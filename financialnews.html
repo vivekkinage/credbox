@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Viewer</title>
+    <link rel="stylesheet" href="homepage.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+    background-color:rgb(233, 226, 226);
+    /* background: url('laptop.jpg');
+    background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  nav{
+    background-color: rgb(156, 240, 188);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav li{
+    height: 50px;
+  }
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  nav a:hover{
+    background-color: hsl(0, 0%, 99%);
+  }
+  nav li:first-child{
+    margin-right: auto;
+  }
+  .sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
+  @media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+  }
+
+
+
+  /* //.sidebar */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #fcfcfc;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* //logo credbox */
+img {
+  width: 50px; 
+  height: 50px; 
+  border: 2px solid #f9f9f9; 
+  border-radius: 2px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  margin: 2px;  
+  border-radius: 50%;
+ /* margin-left: 10px; */
+ margin-right: 1015px;
+ /* float: left; */
+}
+
+.sidebar1 {
+    background-color:rgb(174, 228, 207);
+    color: #000000;
+    padding: 20px;
+    min-width: 230px;
+    height: 100vh;
+    /* background-color: rgba(36, 220, 39, 0.882); */
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+     list-style: none;
+   
+}
+
+.sidebar1 h2 {
+    margin-top: 0;
+}
+
+.sidebar1 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar1 ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar1 ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.sidebar1 ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+
+.dashboard-title{
+  font-size:x-large;
+}
+
+
+
+/* Styles for search container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /* margin-left: 50px; */
+  /* margin-right: 450px; */
+}
+
+/* Styles for search input */
+#searchInput {
+  width: 300px;
+   padding: 10px; 
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Styles for search button */
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+@media(min-width: 300px) and (max-width: 440px){
+  .sidebar{
+    width: 100%;
+  }
+  #searchInput {
+    width: 50px;
+    font-size: 0.8rem;
+  }
+  .credlogo{
+    margin-left: 2rem;
+  }
+
+  .search-container{
+    margin-left: 0;
+  }
+
+  .sidebar1{
+    background-color: #15c7db;
+    color: #000000;
+    padding: 20px;
+    min-width: 10px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+     list-style: none;
+  }
+
+}
+
+        
+/* //blogs */
+
+/* CSS for dropdown menu */
+.sub-menu {
+  display: none; /* Hide sub-menu by default */
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Display sub-menu when parent li is hovered */
+li:hover .sub-menu {
+  display: block;
+}
+
+/* Style for sub-menu items */
+.sub-menu li {
+  background-color: #f7f5f5e2;
+  border-bottom: 1px solid #ccc;
+}
+
+.sub-menu li a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.sub-menu li a:hover {
+  background-color: #e0e0e0;
+}
+
+/* //logo conversation */
+.icon {
+  position:absolute;
+  top:20px;
+  right:20px;
+  /* font-size: 24px; */
+  /* color: #333; 
+  cursor: pointer; */
+  
+}
+
+
+
+
+        /* Custom CSS for container styling */
+        .news-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom CSS for news article */
+        .news-article {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            text-align: left;
+        }
+
+        /* Custom CSS for news title */
+        .news-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Custom CSS for news description */
+        .news-description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Custom CSS for read more link */
+        .read-more {
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Custom CSS for carousel container */
+        .slick-slider {
+            margin: 20px auto;
+        }
+
+        /* Custom CSS for carousel slides */
+        .slick-slide {
+            padding: 0 10px;
+        }
+
+
+
+
+
+
+
+
+        .news-container {
+            width: 2000px; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the container */
+            padding: 0px; /* Add padding for spacing */
+            background-color: #f6f6f6; /* Background color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
+        .news-container h1 {
+            margin-top: 50px; /* Remove top margin for the heading */
+            font-size: 24px; /* Adjust heading font size */
+            text-align: center; /* Center align the heading */
+        }
+
+        #news-carousel {
+            height: 500px; /* Specify the height of the carousel */
+        }
+
+        .news-article {
+            padding: 20px; /* Add padding around each news article */
+        }
+
+        .news-title {
+            font-size: 20px; /* Adjust the font size of the news title */
+            margin-bottom: 10px; /* Add margin below the news title */
+        }
+
+        .news-description {
+            font-size: 16px; /* Adjust the font size of the news description */
+            margin-bottom: 10px; /* Add margin below the news description */
+        }
+
+        .read-more {
+            display: block; /* Make the read more link a block element */
+            color: #007bff; /* Set the color of the read more link */
+            text-decoration: none; /* Remove underline from the read more link */
+            font-weight: bold; /* Make the read more link bold */
+        }
+
+        /* Custom styles for the paging */
+        .slick-paging .slick-page {
+            background: #ddd; /* Background color of page numbers */
+            color: #ede7e7; /* Text color of page numbers */
+            border: none; /* Remove border */
+            border-radius: 50%; /* Make the page numbers circular */
+            width: 30px; /* Width of each page number */
+            height: 30px; /* Height of each page number */
+            line-height: 30px; /* Center align text vertically */
+            text-align: center; /* Center align text horizontally */
+            margin: 0 5px; /* Add margin between page numbers */
+            cursor: pointer; /* Set cursor to pointer on hover */
+        }
+         /* Custom styles for the paging */
+         .slick-paging {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .slick-paging .slick-current {
+            background: #007bff;
+            color: #fff;
+        }
+        .sidebar1 img {
+            margin-right: 10px;
+            margin-bottom: -5px;
+            width: 19px;  
+            height: 19px; 
+            border-radius: 1rem;
+             /* margin-top:3px ; */
+        }
+      
+.image-container {
+  text-align: center; 
+  margin-bottom: 35px; 
+}
+
+.image-container img {
+  max-width: 100%; 
+  height: 100px; 
+  width: 100px;
+  border-radius: 4rem; 
+margin-right: 65px;
+}
+    </style>
+</head>
+<body>
+ 
+    <!-- //Nav bar    -->
+ <nav>
+    <ul>
+     
+      <div class="search-container">
+        <input type="text" class="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchFunction()">Search</button>
+    </div>
+    </ul>
+  </nav>
+
+<!-- sidebar -->
+<div class="container">
+  <div class="sidebar1">
+    <div class="image-container">
+      <img src="credbox.jpeg" alt="Image" width="100" height="100">
+  </div>
+      <ul>
+        <li><a href="homepage.html"><img src="home.svg" alt="Home Icon">Home</a></li><br>
+        <li>
+          <a href="blogname.html"><img src="blogs.png" alt="Home Icon">Blogs</a>
+          <ul class="sub-menu">
+          </ul>
+        </li><br>
+        <li><a href="news.html"><img src="news.png" alt="Home Icon">News</a></li><br>
+        <li><a href="#Notification"><img src="notification.png" alt="Home Icon">Notification</a></li><br>
+        <li><a href="#Profile"><img src="profile.png" alt="Home Icon">Profile</a></li><br>
+        <li><a href="#Logout"><img src="logout.png" alt="Home Icon">Logout</a></li><br> 
+      </ul>
+      
+  </div>
+
+
+
+   <div class="news-container">
+    <h1>Latest News</h1>
+    <div id="news-carousel" class="slick-slider"></div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script>
+ 
+    const NEWS_API_KEY = 'f7b176bfe5954c93b7e4b52189b96898';
+
+ 
+    async function fetchNews() {
+        const url = `https://newsapi.org/v2/everything?q=keyword&apiKey=${NEWS_API_KEY}`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            displayNews(data.articles);
+        } catch (error) {
+            console.error('Error fetching news:', error);
+        }
+    }
+
+
+    function displayNews(articles) {
+        const newsCarousel = $('#news-carousel');
+        // const slickPaging = $('#slick-paging');
+
+        
+        articles.forEach(article => {
+            const slide = `
+                <div class="news-article">
+                    <h2 class="news-title">${article.title}</h2>
+                    <p class="news-description">${article.description}</p>
+                    <a href="${article.url}" class="read-more" target="_blank">Read more</a>
+                </div>
+            `;
+            newsCarousel.append(slide);
+        });
+
+        
+        newsCarousel.slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            arrows: true,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }
+
+
+
+    
+    
+
+ 
+    $(document).ready(() => {
+        fetchNews();
+    });
+</script>  
+  
+</body>
+</html>

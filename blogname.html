@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Submission Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+    body{
+    min-height: 100vh;
+    background-color:rgb(239, 243, 241);
+    /* background: url('laptop.jpg');
+    background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    
+  }
+.sidebar ul li a:hover {
+    text-decoration: underline;
+    color: rgb(18, 170, 208); /* Change text color to red on hover */
+    font-weight: bold; 
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s ease-in-out;
+  }
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+Style for the search input
+.search-input {
+    padding: 5px; /* Add padding to the input */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add border radius */
+    width: 200px; /* Set width of the input */
+    
+}
+
+/* Style for the search button */
+.search-button {
+    background-color: #636aee; /* Set button background color */
+    cursor: pointer; /* Set cursor to pointer */
+    padding: 10px 20px;
+    margin-left: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+/* Style for the navigation bar */
+nav {
+    background-color:rgb(156, 240, 188) ; /* White background color */
+    padding: 17px; /* Padding around the navigation bar */
+    border-bottom: 1px solid #ccc; /* Bottom border for separation */
+    display: flex; /* Display navigation items inline */
+    justify-content: space-between; /* Align items evenly along the main axis */
+    align-items: center; /* Align items vertically */
+}
+
+/* Styles for search container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for search input */
+#searchInput {
+    width: 300px;
+    padding: 10px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Container styles */
+.container {
+    max-width: 500px;
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fefcfc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(203, 208, 203, 0.755);
+    margin-left: 550px;
+    margin-top: 100px;
+   /* float: right;*/
+     top:0; 
+    position: absolute;
+    border-radius: 10px;
+    /* font-family: 'Arial', sans-serif; */
+}
+
+/* Additional styles for form elements */
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #080b0b; /* Change text color to blue */
+    text-transform: uppercase; 
+    letter-spacing: 1px; /* Add letter spacing */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    /* font-weight: bold; */
+    display: block;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #2371ba;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    outline: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/* Styles for left sidebar */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    height: 615px;
+    background-color: rgb(174, 228, 207);
+    color: #000;
+    /* background-color: rgba(36, 220, 39, 0.882); */
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(217, 16, 16, 0.1);
+     list-style:none;
+}
+
+.sidebar h2 {
+    margin-right: 135px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #141111;
+    /* font-weight: bold; */
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for sub-menu items */
+.sidebar li {
+  background-color: #f5f7f0e2;
+  border-bottom: 2px solid #0eec7d;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration:none;
+  color: #080505;
+  
+}
+
+.sidebar li a:hover {
+  background-color: #1170a2;
+}
+
+
+.sidebar img {
+            margin-right: 10px;
+            width: 19px;  
+            height: 19px; 
+            margin-bottom: -5px;
+             /* margin-top:3px ; */
+        }
+        .image-container {
+  text-align: center; 
+  margin-bottom: 35px; 
+}
+
+.image-container img {
+  max-width: 100%; 
+  height: 100px; 
+  width: 100px;
+  border-radius: 4rem; 
+margin-right: 65px;
+}
+    </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <!-- <div class="image-container">
+      <img src="credbox.jpeg" alt="Image" width="100" height="100">
+    </div> -->
+    <h1>.</h1>
+    <!-- Search form -->
+    <!-- <div class="search-container">
+      <input type="text" class="text" id="searchInput" placeholder="Search...">
+      <button class="search-button" onclick="searchFunction()">Search</button>
+    </div> -->
+  </nav>
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="image-container">
+    <img src="credbox.jpeg" alt="Image" width="100" height="100">
+  </div>
+    <ul>
+      <li><a href="homepage.html"><img src="home.svg" alt="Home Icon">Home</a></li><br>
+      <li>
+        <a href="blogname.html"><img src="blogs.png" alt="Home Icon">Blogs</a>
+        <ul class="sub-menu">
+         </ul>
+      </li><br>
+      <li><a href="news.html"><img src="news.png" alt="Home Icon">News</a></li><br>
+        <li><a href="#Notification"><img src="notification.png" alt="Home Icon">Notification</a></li><br>
+        <li><a href="#Profile"><img src="profile.png" alt="Home Icon">Profile</a></li><br>
+      <li><a href="#"><img src="logout.png" alt="Home Icon">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main content container -->
+  <div class="container">
+    <form action="#" method="post" enctype="multipart/form-data">
+      <h2>Blog Name</h2>
+      <div class="form-group">
+        <label for="blog_name">Blog Name:</label>
+        <input type="text" id="blog_name" name="blog_name" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="15" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="attachment">Attachment:</label>
+        <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+

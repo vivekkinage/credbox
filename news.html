@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <!-- <link rel="stylesheet" href="homepage.css"> -->
+     <style>
+        img {
+  width: 50px; 
+  height: 50px; 
+  border: 2px solid #c9c6c6; 
+  border-radius: 2px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  margin: 2px;  
+  border-radius: 50%;
+ /* margin-left: 10px; */
+ margin-right: 1450px;
+ /* float: left; */
+}
+
+.sidebar1 img {
+            margin-right: 10px;
+            margin-bottom: -5px;
+            width: 19px;  
+            height: 19px; 
+            border-radius: 1rem;
+             /* margin-top:3px ; */
+        }
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+    background-color:rgb(237, 243, 240);
+    /* background: url('laptop.jpg');
+    background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+  }
+  nav{
+    background-color:rgb(156, 240, 188);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+  }
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav li{
+    height: 50px;
+  }
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  nav a:hover{
+    background-color: #f0f0f0;
+  }
+  nav li:first-child{
+    margin-right: auto;
+  }
+  .sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
+  @media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+  }
+
+
+
+  /* //.sidebar */
+  body {
+   
+    margin: 0;
+    padding: 0;
+    border: 2px solid #c6c7c7;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* //logo credbox */
+img {
+  width: 50px; 
+  height: 50px; 
+  border: 2px solid #c9c6c6; 
+  border-radius: 2px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  margin: 2px;  
+  border-radius: 50%;
+}
+.image-container {
+  text-align: center; 
+  margin-bottom: 35px; 
+}
+
+.image-container img {
+  max-width: 100%; 
+  height: 100px; 
+  width: 100px;
+  border-radius: 4rem; 
+margin-right: 65px;
+}
+
+.sidebar1 {
+    background-color: rgb(174, 228, 207);
+    color: #000000;
+    padding: 20px;
+    min-width: 230px;
+    height: 100vh;
+    /* background-color: rgba(36, 220, 39, 0.882); */
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+     list-style: none;
+   
+}
+
+.sidebar1 h2 {
+    margin-top: 0;
+}
+
+.sidebar1 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar1 ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar1 ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.sidebar1 ul li a:hover {
+    text-decoration: underline;
+    color: rgb(18, 170, 208); /* Change text color to red on hover */
+    font-weight: bold; /* Make the text bold on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s ease-in-out;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 300px) and (max-width: 440px){
+  .sidebar{
+    width: 100%;
+  }
+  #searchInput {
+    width: 50px;
+    font-size: 0.8rem;
+  }
+  .credlogo{
+    margin-left: 2rem;
+  }
+
+  .search-container{
+    margin-left: 0;
+  }
+
+  .sidebar1{
+    background-color: #15c7db;
+    color: #000000;
+    padding: 20px;
+    min-width: 10px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+     list-style: none;
+  }
+
+}
+
+        
+/* //blogs */
+
+
+
+.filter-container {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-button {
+    background-color: #0fa8d3;
+    color: rgb(255, 253, 253);
+    font-size: medium;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-right: 25px;
+    width: 90px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    /* background-color: #0a1464; */
+    color: rgb(18, 170, 208);
+    background-color: #115579;
+}
+
+.filter-container:hover .dropdown-content {
+    display: block;
+}
+
+
+/* //blocks of news */
+.news-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-item {
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+
+.news-description {
+    padding: 10px;
+}
+
+.news-description h2 {
+    margin-top: 0;
+}
+
+.show-more-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.full-news {
+    display: none;
+}
+
+.show-more-btn.clicked + .full-news {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* Style for sub-menu items */
+.sidebar1 li {
+  background-color: #f5f7f0e2;
+  border-bottom: 2px solid #0eec7d;
+}
+
+.sidebar1 li a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration:none;
+  color: #030202;
+  
+}
+
+.sidebar1 li a:hover {
+  background-color: #115579;
+}
+     </style>
+     </head>
+<body>
+  
+<!-- //Nav bar    -->
+ <nav>
+    <!-- <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+       <li><a href="#">Profile</a></li>
+       </ul> -->
+
+    <ul>
+      
+  <div class="filter-container">
+    <!-- Button for filtering -->
+    <button class="filter-button">Filter</button>
+    <div class="dropdown-content">
+      <a href="CredboxNews.html">Credbox News</a>
+      <a href="financialnews.html">Financial Platform</a>
+    </ul>
+</div>
+
+</div>
+      <!-- <li><a href="#" class="credlogo">Credbox Service</a></li> -->
+      <!-- <div class="search-container">
+        <input type="text" class="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchFunction()">Search</button>
+    </div> -->
+     <!-- <div class="icon">
+      <img src="conversation.png" alt="Conversation Icon">
+    </div> -->
+    
+      <!-- <li class="hideOnMobile"><a href="#">Profile</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li> -->
+    </ul>
+  </nav>
+  
+
+
+
+  
+  <!-- <div class="icon">
+    <img src="conversation.png" alt="Conversation Icon">
+  </div> -->
+  <!-- <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+  </script> -->
+
+
+
+<!-- sidebar -->
+<div class="container">
+  <div class="sidebar1">
+    <div class="image-container">
+      <img src="credbox.jpeg" alt="Image" >
+  </div>
+      <ul>
+        <li><a href="homepage.html">
+          <img src="home.svg" alt="Home Icon">Home</a></li><br>
+        <li>
+          <a href="blogname.html"><img src="blogs.png" alt="Home Icon">Blogs</a>
+          <ul class="sub-menu">
+          </ul>
+        </li><br>
+        <li><a href="news.html"><img src="news.png" alt="Home Icon">News</a></li><br>
+        <li><a href="#Notification"><img src="notification.png" alt="Home Icon">Notification</a></li><br>
+        <li><a href="#Profile"><img src="profile.png" alt="Home Icon">Profile</a></li><br>
+        <li><a href="#Logout"><img src="logout.png" alt="Home Icon">Logout</a></li><br> 
+      </ul>
+  </div>
+  </div>
+  <script src="scripts.js"></script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+

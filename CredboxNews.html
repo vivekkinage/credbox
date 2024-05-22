@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+
+        .news-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-item {
+    width: 50%;
+    border: 1px solid #f3ecec;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Add margin between each container */
+    box-sizing: border-box; 
+    max-width: 400px;
+    width: 300px;
+    margin-left: 35px;
+   float: right;
+      top:0;  
+    margin-top: 20px;
+    background-color: white;
+    height:fit-content;
+}
+
+.news-item img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.news-description {
+    padding: 20px;
+}
+
+.news-description h2 {
+    margin-top: 0;
+}
+
+.show-more-btn {
+    background-color: #3859ad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.full-news {
+    display: none;
+}
+
+.show-more-btn.clicked + .full-news {
+    display: block;
+}
+
+body{
+        font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+      }
+.sidebar1 img {
+            margin-right: 10px;
+            margin-bottom: -5px;
+            width: 19px;  
+            height: 19px; 
+            border-radius: 1rem;
+             /* margin-top:3px ; */
+        }
+      
+.image-container {
+  text-align: center; 
+  margin-bottom: 35px; 
+}
+
+.image-container img {
+  max-width: 100%; 
+  height: 100px; 
+  width: 100px;
+  border-radius: 4rem; 
+margin-right: 65px;
+}
+
+</style>
+</head>
+<body>
+  
+<!-- //Nav bar    -->
+ <nav>
+    <!-- <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+       <li><a href="#">Profile</a></li>
+       </ul> -->
+
+    <ul>
+      <!-- <li><a href="#" class="credlogo">Credbox Service</a></li> -->
+      <div class="search-container">
+        <input type="text" class="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchFunction()">Search</button>
+    </div>
+     <!-- <div class="icon">
+      <img src="conversation.png" alt="Conversation Icon">
+    </div> -->
+    
+      <!-- <li class="hideOnMobile"><a href="#">Profile</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li> -->
+    </ul>
+  </nav>
+
+
+
+<!-- sidebar -->
+<div class="container">
+  <div class="sidebar1">
+    <div class="image-container">
+      <img src="credbox.jpeg" alt="Image" width="100" height="100">
+  </div>
+      <ul>
+        <li><a href="homepage.html"><img src="home.svg" alt="Home Icon">Home</a></li><br>
+        <li>
+          <a href="blogname.html"><img src="blogs.png" alt="Home Icon">Blogs</a>
+          <ul class="sub-menu">
+          </ul>
+        </li><br>
+        <li><a href="news.html"><img src="news.png" alt="Home Icon">News</a></li><br>
+        <li><a href="#Notification"><img src="notification.png" alt="Home Icon">Notification</a></li><br>
+        <li><a href="#Profile"><img src="profile.png" alt="Home Icon">Profile</a></li><br>
+        <li><a href="#Logout"><img src="logout.png" alt="Home Icon">Logout</a></li><br> 
+      </ul>
+  </div>
+
+
+
+
+  <div class="news-container">
+    <div class="news-item">
+        <img src="news1.webp" alt="News 1">
+        <div class="news-description">
+            <h2>News 1</h2>
+            <p>Financial news is any news that pertains to money and investments, including news on markets. Financial news can be presented in many formats, including articles, videos, tables, charts, podcasts, broadcasts and more, and can encapsulate broad topics that affect the finance industry, such as economic policies, other legislation and major global news events. </p>
+            <button class="show-more-btn">Show More</button>
+            <div class="full-news">
+                <p>For individuals, financial news is beneficial because it provides information that can affect their personal finances and investment portfolio. Financial news is essential to financial professionals, as it can have a positive,negative and neutral effect on investing.</p>
+                <!-- Add full information here -->
+            </div>
+        </div>
+    </div>
+    <!-- Add more news items similarly -->
+    <div class="news-container">
+        <div class="news-item">
+            <img src="news1.webp" alt="News 1">
+            <div class="news-description">
+                <h2>News 2</h2>
+                <p>Financial news is any news that pertains to money and investments, including news on markets. Financial news can be presented in many formats, including articles, videos, tables, charts, podcasts, broadcasts and more, and can encapsulate broad topics that affect the finance industry, such as economic policies, other legislation and major global news events. </p>
+                <button class="show-more-btn">Show More</button>
+                <div class="full-news">
+                    <p>For individuals, financial news is beneficial because it provides information that can affect their personal finances and investment portfolio. Financial news is essential to financial professionals, as it can have a positive,negative and neutral effect on investing.</p>
+                    <!-- Add full information here -->
+                </div>
+            </div>
+        </div>
+    <div class="news-container">
+        <div class="news-item">
+            <img src="news1.webp" alt="News 1">
+            <div class="news-description">
+                <h2>News 3</h2>
+                <p>Financial news is any news that pertains to money and investments, including news on markets. Financial news can be presented in many formats, including articles, videos, tables, charts, podcasts, broadcasts and more, and can encapsulate broad topics that affect the finance industry, such as economic policies, other legislation and major global news events. </p>
+                <button class="show-more-btn">Show More</button>
+                <div class="full-news">
+                    <p>For individuals, financial news is beneficial because it provides information that can affect their personal finances and investment portfolio. Financial news is essential to financial professionals, as it can have a positive,negative and neutral effect on investing.</p>
+                    <!-- Add full information here -->
+                </div>
+            </div>
+        </div>
+           
+             
+</div> 
+
+  <script src="scripts.js"></script> 
+</body>
+</html>
+
+
